@@ -1,0 +1,13 @@
+<StackLayout>
+    <button text="Iniciar" (tap)="iniciarJuego()" isEnabled = "{{estadoJuego}}"></button>
+
+    <WrapLayout orientation="horizontal" width="100%" height="{{altura}}px">
+        <Image width="33%" height="200px" src="res://{{forats[i]}}" (tap)="aplastarTopo(i)" strech="none" *ngFor="let valor of forats; index as i"></Image>
+    </WrapLayout>
+
+    <label style="font-size: 30px;" text="Tu puntuación -> {{puntos}}"></label>
+    <WrapLayout orientation="horizontal" width="100%" height="90px">
+        <label style="font-size: 30px;" text="Tus vidas -> "></label>
+        <Image width="90px" height="90px" src="res://corazon" *ngFor="let valor of vidas"></Image>
+    </WrapLayout>
+</StackLayout> 
